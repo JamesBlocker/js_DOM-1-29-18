@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            background-color: 
+        }
+    </style>
 </head>
 <body>
-    <h1>My Favorite Bands</h1>
+    <h1 id="title-page">My Favorite Bands</h1>
     <ul>
         <li>The Beatles</li>
-        <li>The Kinks</li>
+        <li id="secondBand">The Kinks</li>
         <li>The Animals</li>
     </ul>
+
+    <script>
+        var firstBand = document.body.children[1].children[0];
+        var secondBand = document.body.children[1].children[1];
+        var thirdband = document.body.children[1].children[2];
+
+        firstBand.innerText = "A";
+        secondBand.innerText = "B";
+        thirdband.innerText = "C";
+
+        firstBand.style.background = "red";
+        secondBand.style.background = "green";
+        thirdband.style.background = "yellow";
+
+        function goBlue() {
+            secondBand.style.background = "blue"; 
+        }
+
+        function goGreen() {
+            secondBand.style.background = "green";
+        }
+
+    </script>
 </body>
 </html>
