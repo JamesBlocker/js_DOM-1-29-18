@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1 id="title-page">My Favorite Bands</h1>
-    <ul>
+    <ul id="the-bands">
         <li>The Beatles</li>
         <li id="secondBand">The Kinks</li>
         <li>The Animals</li>
@@ -23,6 +23,8 @@
         <li>Eli</li>
         <li>Mahima</li>
     </ul>
+
+    <ul id="theStudents"></ul>
 
     <script>
         var firstBand = document.body.children[1].children[0];
@@ -46,10 +48,29 @@
         }
 
         var theLis = document.querySelectorAll('li');
-
         for (var i = 0; i < theLis.length; i++) {
             theLis[i].style.border = "1px solid red";
         }
+
+        var theBands = document.querySelector("#the-bands");
+
+        var theNewBand = document.createElement('li');
+        theNewBand.innerText = 'Tina Turner';
+        theBands.appendChild(theNewBand);
+
+        var studentsList = ["James", "Joseph", "Daniel"];
+        var theStudents = document.querySelector('#theStudents');
+        for (var i = 0; i < studentsList.length; i++) {
+
+            var theNewStudent = document.createElement('li');
+            theNewStudent.innerText = studentsList[i];
+            theStudents.appendChild(theNewStudent);
+            
+            // var student = document.createElement('li');
+            // student.innerText = studentsList[i];
+            // student.appendChild()
+        }
+
 
     </script>
 </body>
