@@ -58,7 +58,9 @@
         theNewBand.innerText = 'Tina Turner';
         theBands.appendChild(theNewBand);
 
-        var studentsList = ["James", "Joseph", "Daniel"];
+
+
+        var studentsList = ["James", "Joseph", "Daniel", "Jad"];
         var theStudents = document.querySelector('#theStudents');
         for (var i = 0; i < studentsList.length; i++) {
 
@@ -66,9 +68,16 @@
             theNewStudent.innerText = studentsList[i];
             theStudents.appendChild(theNewStudent);
             
-            // var student = document.createElement('li');
-            // student.innerText = studentsList[i];
-            // student.appendChild()
+        }
+
+        function isPrime(num) {
+            var positiveNum = Math.abs(num);
+            for (var i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
         }
 
 
